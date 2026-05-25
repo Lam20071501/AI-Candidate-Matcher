@@ -1,5 +1,5 @@
 # AI-Candidate-Matcher
-## 1.Project Title & Problem Statement
+## 1. Project Title & Problem Statement
 Part 1: Corrected Problem Statement Text
 Problem Statement: The Intelligent Recruiter
 
