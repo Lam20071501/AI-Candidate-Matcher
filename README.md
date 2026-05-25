@@ -34,6 +34,16 @@ Not all missing skills are equal. The LLM distinguishes "has never used Terrafor
 Explainable, overridable decisions
 Every ranking comes with a written rationale. The hiring manager reads exactly why candidate A scored 91 and candidate B scored 67. They can disagree, add context the agent didn't have, and override — with full visibility into the logic. No black box.
 
+## 4. Systems Requirements & dependencies
+1. Software Requirements
+Python 3.x: Ensure you have Python installed (check by typing python --version in your terminal).
+
+VS Code (or any IDE): Since you are using Visual Studio Code, ensure the Python Extension is installed.
+
+Microsoft PowerPoint: Required only to view the final file once it is generated.
+
+2. Required Python Dependencies
+The script relies on the python-pptx library to handle the creation of slides. You must install these via your terminal or command prompt:
 
 ## 5. Installation & Configuration Instructions
 
