@@ -45,9 +45,6 @@ Microsoft PowerPoint: Required only to view the final file once it is generated.
 2. Required Python Dependencies
 The script relies on the python-pptx library to handle the creation of slides. You must install these via your terminal or command prompt:
 Bash
-# The main library for generating PowerPoint files
-pip install python-pp **n8n workflow platform**, which can be accessed via their managed cloud or self-hosted on a local server.
-*   **tx
 
 # This ensures compatibility with some legacy object handling used in the script
 pip install collections-extended
