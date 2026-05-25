@@ -66,3 +66,162 @@ Follow these steps to test the candidate matching system:
 2. Edit the JSON input in this node to set up your mock candidate profiles and job description text.
 3. Click the orange `Execute Workflow` button at the bottom of the screen.
 4. Once the execution completes successfully, view the output in the final `Top 5 Candidates` node.
+
+## 7. Explanation Workflow
+Phase 1 · Intake & Data Preparation
+What is it?
+This phase is the starting point of the recruitment workflow. The system receives the Job Description (JD) and candidate CVs, then prepares all data for AI processing.
+What happens?
+•	Recruiter uploads the JD and candidate CVs 
+•	ATS / Google Form / Webhook sends data into n8n 
+•	Workflow automatically starts 
+•	AI reads and analyses the JD 
+•	AI extracts: 
+o	Required skills 
+o	Optional skills 
+o	Seniority level 
+o	Hidden expectations 
+•	AI enriches candidate CVs into structured data 
+Why important?
+Traditional ATS only scans keywords.
+This workflow understands meaning and context, making screening more accurate and fair.
+Example
+JD says:
+•	“Kafka preferred” 
+•	“Microservices” 
+•	“Fast-paced startup” 
+AI understands:
+•	Event-driven systems experience matters 
+•	Candidate should adapt quickly 
+•	Independent working style needed 
+Candidate CV says:
+•	“Built fault-tolerant systems” 
+AI converts into:
+•	Distributed systems 
+•	Backend engineering 
+•	Event-driven architecture 
+Easy Analogy
+Like organising messy documents into clean labelled folders before evaluation starts.
+______________
+Phase 2 · Semantic Matching & Gap Analysis
+What is it?
+This phase compares candidate experience with job requirements based on meaning instead of exact keywords.
+What happens?
+•	AI matches similar technologies and experiences 
+•	Detects equivalent skills 
+•	Uses confidence scoring 
+•	Analyses missing skills carefully 
+•	Classifies gaps into: 
+o	Closable gaps 
+o	Serious mismatches 
+o	Irrelevant gaps 
+Why important?
+Traditional ATS may reject strong candidates because wording differs.
+This workflow understands related experiences and avoids unfair rejection.
+Example
+JD:
+•	“Event-driven architecture” 
+CV:
+•	“Built message queues” 
+Traditional ATS:
+•	No keyword match 
+LLM:
+•	Strong semantic match 
+Gap Example:
+•	Candidate knows Pulumi but not Terraform 
+•	AI identifies this as a learnable gap instead of rejection 
+Easy Analogy
+Like understanding two people mean the same thing even when using different words.
+______________
+Phase 3 · Candidate Growth & Hidden Signal Evaluation
+What is it?
+This phase evaluates candidate potential, growth speed, achievements, and hidden strengths.
+What happens?
+•	Measures career progression speed 
+•	Detects leadership growth 
+•	Evaluates responsibility expansion 
+•	Finds hidden signals such as: 
+o	GitHub projects 
+o	Open-source contributions 
+o	Technical blogs 
+o	Public talks 
+o	Side projects 
+o	Quantified achievements 
+Why important?
+Some high-potential candidates may not have many years of experience but show strong growth and impact.
+Example
+Candidate:
+•	Only 4 years experience 
+•	Became Senior quickly 
+•	Leading a team early 
+AI may evaluate:
+•	4 years experience ≈ 6–7 years effective capability 
+Another example:
+•	Maintains 2.4k star GitHub repository 
+•	Reduced company costs by $180k/year 
+These become valuable hidden strengths.
+Easy Analogy
+Not judging someone by how long they worked, but by how fast they improved and what they achieved.
+______________
+Phase 4 · Multi-Dimension Scoring & Explainability
+What is it?
+This phase calculates candidate scores and explains the reasoning behind every ranking.
+What happens?
+AI evaluates candidates using multiple dimensions:
+•	Skill match 
+•	Career trajectory 
+•	Impact achieved 
+•	Gap severity 
+•	Hidden signals 
+•	Culture fit 
+The system then generates:
+•	Overall score 
+•	Sub-scores 
+•	Strengths 
+•	Weaknesses 
+•	Risks 
+•	Final recommendation 
+Why important?
+Prevents black-box AI decisions and makes the recruitment process more transparent.
+Example
+Candidate Score:
+•	Skill Match: High 
+•	Leadership: Strong 
+•	Gap Severity: Low 
+Final Score:
+•	91/100 
+AI Explanation:
+•	Strong distributed systems experience 
+•	Excellent impact metrics 
+•	Small Terraform gap 
+•	Limited senior-level tenure 
+Easy Analogy
+Like a teacher not only giving marks, but also explaining why the student received them.
+______________
+Phase 5 · Human Review & Continuous Learning
+What is it?
+This is the final decision-making phase where hiring managers review AI recommendations and provide feedback.
+What happens?
+Hiring manager can:
+•	Approve candidate 
+•	Reject candidate 
+•	Override AI scores 
+•	Add comments 
+•	Give additional context 
+The system stores:
+•	Human corrections 
+•	Override reasons 
+•	Hiring patterns 
+•	Feedback history 
+Future workflows improve using this feedback.
+Why important?
+The final hiring decision always remains with humans, not AI.
+Example
+AI Score:
+•	79 
+Manager Override:
+•	88 
+Reason:
+•	Hiring manager personally knows candidate’s strong expertise 
+Easy Analogy
+AI acts like a smart assistant that helps decision-making, while humans remain the final authority.
