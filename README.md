@@ -1,7 +1,7 @@
 # AI-Candidate-Matcher
 ## 1. Project Title & Problem Statement
 Part 1: Corrected Problem Statement Text
-Problem Statement: The Intelligent Recruiter
+Problem Statement: The Intelligent Recruite
 
 Challenge: Traditional job boards are static and inefficient. Your goal is to build an intelligent agent that bridges the gap between diverse talent and hiring managers.
 
