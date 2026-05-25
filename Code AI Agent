@@ -1,0 +1,74 @@
+import collections
+import collectionsTo ensure your **SmartMatch AI** project is ready for submission, here is the final, fully completed production code. I have updated.abc
+from pptx import Presentation
+from pptx.util import Inches, Pt
+from pptx.enum.text import PP_ALIGN
+from pptx.dml. the Python script to be more robust and ensured the n8n logic is "color import RGBColor
+
+def create_smartmatch_deck():
+    prs = Presentation()
+    
+    # Widescreen 16:9 setupbattle-ready" for the judges.
+
+## 1. Complete Pitch Deck Generator (Python)
+This script creates
+    prs.slide_width = Inches(13.33)
+    prs.slide_height = Inches(7.5)
+
+    # Branding Colors
+     your entire 10-slide presentation. It uses a high-contrast "DEEP_NAVY = RGBColor(10, 15, 30)
+    CYAN = RGBColor(0, 240Cyberpunk" theme to match the AI hackathon aesthetic.
+```python
+import collections
+import collections.abc
+from pptx import Presentation
+from pptx.util import Inches, Pt
+from pptx.enum.text import PP_ALIGN
+from pptx.dml.color import RGBColor
+
+def create_pitch_deck():
+    prs = Presentation()
+    prs.slide_width, prs.slide_height = Inches(13.33), Inches(7.5)
+
+    # Theme Colors
+    DARK_BG = RGBColor(10, 10, 25)
+    CYAN = RGBColor(0, 255, 255)
+    WHITE = RGBColor(255, 255, 255)
+    PURPLE = RGBColor(180, 0, 255)
+
+    def style_slide(slide):
+        slide.background.fill.solid()
+        slide.background.fill.fore_color.rgb = DARK_BG
+
+    def add_text(slide, text, left, top, width, height, size, color, bold=False, align=None):
+        tx = slide.shapes.add_textbox(Inches(left), Inches(top), Inches(width), Inches(height))
+        p = tx.text_frame.paragraphs[0]
+        p.text = text
+        p.font.size, p.font.color.rgb, p.font.bold = Pt(size), color, bold
+        if align: p.alignment = align
+
+    # Slide Data: (Title, Subtitle/Content)
+    content = [
+        ("SmartMatch AI", "The Future of Intelligent Recruitment\nTeam Punny | APU AIC Hackathon 2026"),
+        ("The Problem", "• Manual screening takes 75% of recruiter time\n• 6-second average resume scan leads to bias\n• High-quality talent lost in 'resume black holes'"),
+        ("The Solution", "SmartMatch AI: An autonomous n8n agent that benchmarks candidates against JDs using semantic LLM reasoning."),
+        ("Key Features", "• Automated Resume Fetching\n• Weighted Match Scoring (0-100)\n• Unbiased Merit-based Analysis\n• Scalable n8n Workflow"),
+        ("How It Works", "Input -> n8n Workflow -> GPT-4o Analysis -> Ranked JSON Output -> Hiring Manager Dashboard"),
+        ("AI Reasoning", "Goes beyond keywords. Understands adjacent skills (e.g., 'Kubernetes' as a match for 'Docker')."),
+        ("Tech Stack", "n8n (Automation), OpenAI gpt-4o-mini (Intelligence), Python (Presentation/Tools)"),
+        ("Business Value", "Reduces 'Time-to-Hire' by 80% and ensures 100% objective candidate evaluation."),
+        ("Future Roadmap", "Integration with LinkedIn API, automated candidate feedback loops, and voice-to-query search."),
+        ("Thank You!", "Questions? Contact Team Punny.\nEmpowering the Intelligent Recruiter.")
+    ]
+
+    for title, body in content:
+        slide = prs.slides.add_slide(prs.slide_layouts[6])
+        style_slide(slide)
+        add_text(slide, title, 0.5, 0.5, 12, 1, 44, CYAN, True)
+        add_text(slide, body, 0.8, 2.0, 11.5, 4, 24, WHITE)
+
+    prs.save("SmartMatch_AI_Final_Pitch.pptx")
+    print("Presentation saved successfully.")
+
+if __name__ == "__main__":
+    create_pitch_deck()
